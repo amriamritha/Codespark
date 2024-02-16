@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CLUBS</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        
+        <style>
+            #myInput		
+            {
+                width:0%;
+                -webkit-transition:width 0.3s ease-in-out;
+            }
+            #myInput:hover,#myInput:focus	
+            {
+                width:100%;
+                -webkit-transition:width 0.5s ease-in-out;
+            }
+
+        </style>
+
+        <style>
+            .button {
+    display:inline-block;
+    padding: 20px 20px;
+    text-align: center;
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(45deg, #052652, #5c90c2);
+    transition: background-color 0.3s ease; /* Add transition for button hover effect */
+    transition: transform 0.5s;
+    width:400px;
+    height: 150px;
+    border-radius: 3%;
+  }
+
+  /* Style for the buttons on hover */
+  .button:hover {
+    background-color: #0056b3; 
+    color:whitesmoke;/* Darker blue on hover */
+    transform: scale(1.2);
+  }
+  .link{
+    color:whitesmoke;
+  }
+  .link:hover{
+    color:whitesmoke;/* Darker blue on hover */
+    transform: scale(1.2);
+  }
+
+  /* Centering text */
+  .center-text {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  /* Organizing buttons in a grid */
+  .buttons-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns as needed */
+    grid-gap: 20px; /* Adjust the gap between buttons */
+    justify-content: center; /* Center the grid horizontally */
+  }
+            /* navbar */
+            .navbar-default {
+                background-color: #052652 !important;
+                border-color: #E7E7E7;
+                margin-bottom: 10px;
+            }
+            /* Title */
+            .navbar-default .navbar-brand {
+                color: whitesmoke;
+            }
+            .navbar-default .navbar-brand:hover,
+            .navbar-default .navbar-brand:focus {
+                color: rgb(194, 43, 43);
+            }
+            /* Link */
+            .navbar-default .navbar-nav > li > a {
+                color: whitesmoke;
+            }
+            .navbar-default .navbar-nav > li > a:hover,
+            .navbar-default .navbar-nav > li > a:focus {
+                color: whitesmoke;
+                background-color: rgb(194, 43, 43);
+            }
+            .navbar-default .navbar-nav > .active > a,
+            .navbar-default .navbar-nav > .active > a:hover,
+            .navbar-default .navbar-nav > .active > a:focus {
+                color: whitesmoke;
+                background-color: rgb(194, 43, 43);
+            }
+            .navbar-default .navbar-nav > .open > a,
+            .navbar-default .navbar-nav > .open > a:hover,
+            .navbar-default .navbar-nav > .open > a:focus {
+                color: whitesmoke;
+                background-color: rgb(194, 43, 43);
+            }
+            /* Caret */
+            .navbar-default .navbar-nav > .dropdown > a .caret {
+                border-top-color: rgb(194, 43, 43);
+                border-bottom-color: rgb(194, 43, 43);
+            }
+            .navbar-default .navbar-nav > .dropdown > a:hover .caret,
+            .navbar-default .navbar-nav > .dropdown > a:focus .caret {
+                border-top-color: whitesmoke;
+                border-bottom-color: whitesmoke;
+            }
+            .navbar-default .navbar-nav > .open > a .caret,
+            .navbar-default .navbar-nav > .open > a:hover .caret,
+            .navbar-default .navbar-nav > .open > a:focus .caret {
+                border-top-color: #000000;
+                border-bottom-color: #000000;
+            }
+
+            .navbar-default .navbar-nav > .open .dropdown-menu > li >a:hover {
+                background-color: rgb(194, 43, 43);
+            }
+            .dropdown-menu > li > a:hover, 
+            .dropdown-menu > li > a:focus {
+                background-color: rgb(194, 43, 43);
+            }
+
+            /* Mobile version */
+            .navbar-default .navbar-toggle {
+                border-color: #DDD;
+            }
+            .navbar-default .navbar-toggle:hover,
+            .navbar-default .navbar-toggle:focus {
+                background-color: #DDD;
+            }
+            .navbar-default .navbar-toggle .icon-bar {
+                background-color: #CCC;
+            }
+            @media (max-width: 767px) {
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+                    color: whitesmoke;
+                }
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+                    color: #000000;
+                }
+            }
+
+            @media (min-width: 768px){
+                .navbar-nav{
+                    margin: 0 auto;
+                    display: table;
+                    table-layout: fixed;
+                    float:none;
+                }
+            }
+            h3{
+                color:whitesmoke;
+                font-family: 'Times New Roman', Times, serif;
+            }
+
+        </style>
+        <style>
+            a.link_color:hover 
+            {
+                color:whitesmoke;
+            }
+            @media (min-width: 768px){
+                li.dropdown:hover > .dropdown-menu {
+                    display: block;
+                }
+            }
+            td,tr{
+                background-color: rgb(0,37,78);
+                color: whitesmoke;
+            }
+            table 
+            {
+                border-collapse: separate;
+                border-spacing: 2px;
+            }
+            tr 
+            {
+
+                height: 60px;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <!--
+        <nav class="navbar navbar-default" >
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navSearch">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand" href="#">MSEC</a>
+                </div>
+                <div class="collapse navbar-collapse" id="navSearch">
+                    
+                    <p class="navbar-text navbar-right" style="padding-right:10px; color:white ">Contact Us At : 044 - 2480 1636 </p>
+                </div>
+            </div>
+        </nav>
+
+        <a href="#" title="MSEC">
+            <h1 style="text-align: center; float: none; clear: both; margin: 0 auto;" > <img src="msec2_logo1.png" style="max-width: 100%;"/> </h1>
+        </a><br/>
+    -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navBar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navBar"><font face="Times New Roman">
+
+                <ul class="nav navbar-nav">
+                    <li><a href="pro.html">HOME</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"> ABOUT <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about.html"> Vision and Mission </a></li>
+                            <li><a href="management.html"> Management </a></li>
+                            <li><a href="administration.html"> Administration & Faculty</a></li>
+                            <li><a href="Committees.html"> Statutory Cells/ Committees </a></li>
+
+                            <li> <a href="Admission.pdf"> Admissions</a></li>
+                            <li> <a href="Fees.html"> Fees </a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"> DEPARTMENTS <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="civil.html"> Civil Engineering </a></li>
+                            <li><a href="Computer.html"> Computer Science and Engineering </a></li>
+                            <li><a href="ece.html"> Electronics and Communication Engineering </a></li>
+                            <li><a href="eee.html"> Electrical and Electronics Engineering </a></li>
+                            <li><a href="it.html"> Information Technology </a></li>
+                            <li><a href="mechanical.html"> Mechanical Engineering </a></li>
+                            <li><a href="AI_DS.html"> Artificial Intelliigence and Data Science </a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"> INFRASTRUCTURES <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                             <li><a href="lab.html"> Laboratories </a></li>
+                            <li><a href="auditorium.html"> Auditoriums </a></li>
+                            <li><a href="Library.html"> Library </a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"> CLUBS <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="civil.html"> Civil Engineering </a></li>
+                            <li><a href="Computer.html"> Computer Science and Engineering </a></li>
+                            <li><a href="ece.html"> Electronics and Communication Engineering </a></li>
+                            <li><a href="eee.html"> Electrical and Electronics Engineering </a></li>
+                            <li><a href="it.html"> Information Technology </a></li>
+                            <li><a href="mechanical.html"> Mechanical Engineering </a></li>
+                            <li><a href="aiclub.html"> Artificial Intelliigence and Data Science </a></li>
+                        </ul>
+                    </li>
+                    <li><a href="research.html"> RESEARCH </a></li>
+                    <li><a href="placement.html"> PLACEMENTS </a></li>
+                    <li><a href="nirf.html"> NIRF </a></li> 
+                     <li><a href="CollegeBrochure.pdf" target="_blank"> MANDATORY DISCLOSURE </a></li>  
+                     <li><a href="CollegeBrochure.pdf" target="_blank"> BROCHURE </a></li> 
+                    <li><a href="contact.html">CONTACT US </a></li> 								
+                </ul>       
+                </font>
+            </div>
+        </div>
+    </nav>
+
+        <div class="container">
+            <div class="jumbotron page-header" style="text-align: center; background-color: rgb(194, 43, 43);padding: 5px">
+                        <h3>CLUBS </h3>
+                    </div>
+ <div class="row">
+    <div class="buttons-grid">
+        <div class="button">
+          <a class="link" href="civilclub.html">
+          <p style="text-align: center;margin-top: 20px;">CIVIL ENGINEERING</p>
+          <p style="text-align: center;margin-top: 15px;">CIVIL</p>
+        </a>
+        </div>
+        <div class="button">
+          <a class="link" href="adyant.html">
+          <p style="text-align: center;margin-top: 20px;">COMPUTER SCIENCE AND ENGINEERING</p>
+          <p style="text-align: center;margin-top: 15px;">ADYANT CLUB</p>
+        </a>
+        </div>
+        <div class="button">
+          <a class="link" href="dev.html">
+          <p style="text-align: center;margin-top: 20px;">INFORMATION TECHNOLOGY</p>
+          <p style="text-align: center;margin-top: 15px;">DEV DYNASTY</p>
+        </a>
+        </div>
+        <div class="button">
+            <a class="link" href="aiclub.html">
+            <p style="text-align: center;margin-top: 20px;">ARTIFICIAL INTELLIGENCE AND DATA SCIENCE</p>
+          <p style="text-align: center;margin-top: 15px;">AI CLUB</p>
+        </a>
+          </div>
+          <div class="button">
+            <a class="link" href="ececlub.html">
+            <p style="text-align: center;margin-top: 20px;">ELECTRONICS AND COMMUNICATION ENGINEERING</p>
+          <p style="text-align: center;margin-top: 15px;">CIVIL</p>
+        </a>
+          </div>
+          <div class="button">
+            <a class="link" href="eeeclub.html">
+            <p style="text-align: center;margin-top: 20px;">ELECTRICALS AND ELECTRONICS ENGINEERING</p>
+          <p style="text-align: center;margin-top: 15px;">CIVIL</p>
+        </a>
+          </div>
+          <div class="button">
+            <a class="link" href="mechclub.html">
+            <p style="text-align: center;margin-top: 20px;">MECHANICAL ENGINEERING</p>
+          <p style="text-align: center;margin-top: 15px;">CIVIL</p>
+        </a>
+          </div>
+					
+                </div>
+            <br>
+            </div>
+            <br>
+			
+    </body>
+</html>

@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html>
+	 
+    <head>
+        <title>Meenakshi Sundararajan Engineering College</title>
+        <meta charset="utf-12">
+        <meta name="viewport" content="width=device-width, initial-scale=8.0">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+        <style>
+			#blinker
+			{text-decoration:blink;}
+            #myInput		
+            {
+                width:0%;
+                -webkit-transition:width 0.1s ease-in-out;
+            }
+            #myInput:hover,#myInput:focus	
+            {
+                width:100%;
+                -webkit-transition:width 0.3s ease-in-out;
+            }
+
+        </style>
+<style>
+    /* Styles for the pop-up */
+    #popup {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        text-align: center;
+        z-index: 9999;
+    }
+    #popup-content {
+        display: inline-block;
+        background: #fff;
+        padding: 20px;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    #close-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+</style>
+        <style>
+           img.right-aligned {
+            margin-left: 400px;
+        }
+
+
+        img.logo {
+            position: absolute;
+        left: 190px; /* Adjust the position as needed */
+        top: 80px;
+        background-color: rgb(124, 14, 14); /* Ribbon color */
+        padding: 0px; /* Adjust padding as needed */
+        z-index: 1; 
+        }
+            .navbar-default {
+                background-color: #052652!important;
+                border-color: #E7E7E7;
+                margin-bottom: 10px;
+            }
+            /* Title */
+            .navbar-default .navbar-brand {
+                color: white;
+            }
+            .navbar-default .navbar-brand:hover,
+            .navbar-default .navbar-brand:focus {
+                color: rgb(155, 17, 17);
+            }
+            /* Link */
+            .navbar-default .navbar-nav > li > a {
+                color: whitesmoke;
+            }
+            .navbar-default .navbar-nav > li > a:hover,
+            .navbar-default .navbar-nav > li > a:focus {
+                color:   whitesmoke;
+                background-color:  rgb(155, 17, 17);
+            }
+            .navbar-default .navbar-nav > .active > a,
+            .navbar-default .navbar-nav > .active > a:hover,
+            .navbar-default .navbar-nav > .active > a:focus {
+                color: whitesmoke;
+                background-color: rgb(155, 17, 17);
+            }
+            .navbar-default .navbar-nav > .open > a,
+            .navbar-default .navbar-nav > .open > a:hover,
+            .navbar-default .navbar-nav > .open > a:focus {
+                color: whitesmoke;
+                background-color:  rgb(155, 17, 17);
+            }
+            /* Caret */
+            .navbar-default .navbar-nav > .dropdown > a .caret {
+                border-top-color:  rgb(155, 17, 17);
+                border-bottom-color:  rgb(155, 17, 17);
+            }
+            .navbar-default .navbar-nav > .dropdown > a:hover .caret,
+            .navbar-default .navbar-nav > .dropdown > a:focus .caret {
+                border-top-color: whitesmoke;
+                border-bottom-color: whitesmoke;
+            }
+            .navbar-default .navbar-nav > .open > a .caret,
+            .navbar-default .navbar-nav > .open > a:hover .caret,
+            .navbar-default .navbar-nav > .open > a:focus .caret {
+                border-top-color: #000000;
+                border-bottom-color: #000000;
+            }
+
+            .navbar-default .navbar-nav > .open .dropdown-menu > li >a:hover {
+                background-color:  rgb(155, 17, 17);
+            }
+            .dropdown-menu > li > a:hover, 
+            .dropdown-menu > li > a:focus {
+                background-color:  rgb(155, 17, 17);
+            }
+
+            /* Mobile version */
+            .navbar-default .navbar-toggle {
+                border-color: #DDD;
+            }
+            .navbar-default .navbar-toggle:hover,
+            .navbar-default .navbar-toggle:focus {
+                background-color: #DDD;
+            }
+            .navbar-default .navbar-toggle .icon-bar {
+                background-color: #CCC;
+            }
+            @media (max-width: 767px) {
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+                    color: whitesmoke;
+                }
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+                    color: #000000;
+                }
+            }
+
+            @media (min-width: 1024px){
+                .navbar-nav{
+                    margin: 0 auto;
+                    display: table;
+                    table-layout: fixed;
+                    float:none;
+                }
+            }
+
+        </style>
+        <style>
+            a.link_color:hover 
+            {
+                color:whitesmoke;
+            }
+            @media (min-width: 1024px){
+                li.dropdown:hover > .dropdown-menu {
+                    display: block;
+                }
+            }
+            .dropdown{
+                position: fixed;
+  /* Adjust this to your preferred background color */
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9; /* Adjust this to your preferred background color */
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+       
+		</style>
+		<style>
+.button {
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 2px 2px;
+  cursor: pointer;
+}
+
+.button1 {background-color:  #00254E;} /* Blue */
+</style>
+
+		<style>
+    
+    .carousel-container {
+            flex: 1;
+            padding: 20px;
+        }
+        .carousel-inner .item > img {
+            -webkit-animation: zoom 10s;
+            animation: zoom 10s;
+            flex: 1;
+            margin-right: 20px;
+        }
+			.center img.img-with-animation {
+    margin: -28px auto;
+    display: block;
+}
+    </style>
+<style>
+	.pos1 {
+  position: absolute;
+  top: 310px;
+  left: 320px;
+}
+	.pos2 {
+  position: absolute;
+  top: 110px;
+  left: 20px;
+}
+	.centered {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.link-container {
+    display: flex;
+    align-items: center; /* Vertically center elements */
+    justify-content: center; /* Horizontally center elements */
+    max-width: 400px; /* Decrease the maximum width */
+    border: 1px solid #ccc; /* Add a border */
+    padding: 10px; /* Adjust padding for spacing */
+    margin: 10px; /* Add margin for spacing around the box */
+    background-color: #f9f9f9; /* Background color for the box */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+    height:240px;
+}
+
+.link-container a {
+    text-decoration: none; /* Remove underlines from links */
+}
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 8px 16px; /* Adjust button padding */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px; /* Decrease font size */
+    margin: 4px; /* Adjust margin for spacing */
+    cursor: pointer;
+}
+
+.button1 {
+    background-color: #008CBA;
+}
+.chatbot-container {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 10px;
+            width: 10cm;
+            height: 10cm;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Styles for chatbot options */
+        .chatbot-options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        /* Styles for the logo */
+        .logo {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            cursor: pointer; /* Add cursor pointer to indicate it's clickable */
+        }
+
+        /* Style for chatbot container when shown */
+        .show-chatbot {
+            display: block;
+        }
+
+        /* Styles for chatbot close button (X symbol) */
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            color:whitesmoke;
+        }
+
+        /* Styles for chatbot option buttons */
+        .chatbot-option-button {
+            background-color: #050c5e;
+            color: whitesmoke;
+            padding: 30px 20px;
+            border: none;
+            border-radius: 10px;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Hover effect for chatbot option buttons */
+        .chatbot-option-button:hover {
+            background-color: rgb(155, 17, 17);
+            color: whitesmoke;
+        }
+
+        /* Styles for chatbot header */
+        .chatbot-header {
+            background-color: #050c5e;
+            color: whitesmoke
+            text-align: center;
+            padding: 5px;
+            border-radius: 10px 10px 0 0;
+        }
+	/* Style for social icons */
+.social-icons {
+    margin-top: 10px; /* Adjust the spacing as needed */
+}
+
+.social-icons a {
+    font-size: 20px;
+    color: whitesmoke;
+    margin-right: 10px; /* Adjust the spacing between icons */
+    text-decoration: none;
+}
+		</style>
+    </head>
+    <body>
+        <div id="popup">
+            <div id="popup-content">
+                <img src="pop.jpg" alt="Popup Image">
+                <div id="close-button" onclick="closePopup()">X</div>
+            </div>
+        </div>
+    
+        <!-- JavaScript to display the pop-up on page load -->
+        <script>
+            function openPopup() {
+                document.getElementById("popup").style.display = "block";
+            }
+    
+            function closePopup() {
+                document.getElementById("popup").style.display = "none";
+            }
+    
+            // Call openPopup function when the page loads
+            window.onload = openPopup;
+        </script>
+        <nav class="navbar navbar-default" >
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navSearch">S
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand" href="#">MEENAKSHI SUNDARARAJAN ENGINEERING COLLEGE</a>
+                </div>
+                <div class="collapse navbar-collapse" id="navSearch">
+					
+   
+    <p class="navbar-text navbar-right" style="padding-right:10px; color:white ">COUNSELLING CODE:  1309</p>
+                </div>
+            </div>
+        </nav>
+
+        <a href="#" title="MSEC"> 
+         <img src="BACK7.jpg" height="250px" class="right-aligned"/> 
+        </a>
+        <div class="logo-ribbon">
+            <img src="LOGO1.png" alt="College Logo" class="logo">
+        </div>	
+	
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navBar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navBar"><font face="Times New Roman">
+
+                    <ul class="nav navbar-nav">
+                        <li><a href="pro.html">HOME</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"> ABOUT <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="about.html"> Vision and Mission </a></li>
+                                <li><a href="management.html"> Management </a></li>
+								<li><a href="administration.html"> Administration & Faculty</a></li>
+								<li><a href="Committees.html"> Statutory Cells/ Committees </a></li>
+
+								<li> <a href="Admission.pdf"> Admissions</a></li>
+								<li> <a href="Fees.html"> Fees </a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"> DEPARTMENTS <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="civil.html"> Civil Engineering </a></li>
+                                <li><a href="Computer.html"> Computer Science and Engineering </a></li>
+                                <li><a href="ece.html"> Electronics and Communication Engineering </a></li>
+                                <li><a href="eee.html"> Electrical and Electronics Engineering </a></li>
+                                <li><a href="it.html"> Information Technology </a></li>
+                                <li><a href="mechanical.html"> Mechanical Engineering </a></li>
+								<li><a href="AI_DS.html"> Artificial Intelliigence and Data Science </a></li>
+                            </ul>
+                        </li>
+                        
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"> INFRASTRUCTURES <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+								 <li><a href="lab.html"> Laboratories </a></li>
+                                <li><a href="auditorium.html"> Auditoriums </a></li>
+                                <li><a href="Library.html"> Library </a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">CLUBS<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="civil.html"> Civil Engineering </a></li>
+                                <li><a href="adyant.html"> Computer Science and Engineering </a></li>
+                                <li><a href="ece.html"> Electronics and Communication Engineering </a></li>
+                                <li><a href="eee.html"> Electrical and Electronics Engineering </a></li>
+                                <li><a href="dev.html"> Information Technology </a></li>
+                                <li><a href="mechanical.html"> Mechanical Engineering </a></li>
+								<li><a href="aiclub.html"> Artificial Intelliigence and Data Science </a></li>
+                            </ul>
+                        </li>
+                        <li><a href="research.html"> RESEARCH </a></li>
+                        <li><a href="placement.html"> PLACEMENTS </a></li>
+						<li><a href="nirf.html"> NIRF </a></li> 
+						 <li><a href="CollegeBrochure.pdf" target="_blank"> MANDATORY DISCLOSURE </a></li>  
+                         <li><a href="CollegeBrochure.pdf" target="_blank"> BROCHURE </a></li>  
+                        <li><a href="contact.html">CONTACT US </a></li>
+                        <li><a href="login.html">LOGIN </a></li> 								
+					</ul>       
+					</font>
+                </div>
+            </div>
+        </nav>
+		<center> <a href="https://tinyurl.com/yd5xbszl" style="font-size:32px;padding:10px;color:#a71107;font-weight:300;" ><span class="blinking"><font face="Times New Roman">Admissions Open Now!!!</font></span><img src="new.gif" width=60 height=30></img></a>  
+        <div class="container-fluid">
+            <div class="row">
+				
+                <div class="col-sm-1"></div>
+                <div class="col-sm-10">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="800" class="active" ></li>                          
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="item active">
+						
+                                <img src="ft2.jpeg" alt="1" style="width:100%; height: 600px">
+							</div>
+							<div class="item">
+                                <img src="ft4.jpeg" alt="2" style="width:100%; height: 600px">
+                               
+								</div>
+							<div class="item">
+                                <img src="BACK3.avif" alt="2" style="width:100%; height: 600px">
+                              
+								</div>
+							<div class="item">
+                                <img src="ft3.jpg" alt="2" style="width:100%; height: 600px">
+                                
+								</div>
+							
+							<div class="item">
+                                <img src="ft img.jpg" alt="2" style="width:100%; height: 600px">
+                               
+								</div>
+
+                        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="col-sm-2"></div>
+
+            </div>
+            <br>
+        </div>
+			<br>
+            <div class="container">
+                <div class="row">
+                    <!-- Accreditations Box -->
+                    <div class="col-md-4">
+                        <div class="link-container" style="height: 335px;">
+                            <div style="display: inline-block; vertical-align: top; padding-top: 20px;">
+                                <a href="ariia.html" target="_blank"><button class="button button1">ARIIA</button></a>
+                                <a href="AboutIIC.html" target="_blank"><button class="button button1">IIC</button></a>
+                                <a href="NBA.html" target="_blank"><button class="button button1">NBA</button></a><br>
+                                <a href="https://msec.edu.in/NAAC/NAAC.html" target="_blank"><button class="button button1">NAAC</button></a>
+                                <a href="MoU.html" target="_blank"><button class="button button1">MoU</button></a>
+                            </div>
+                        </div>
+                            <div class="w3-container" class="w3-border">
+                                <h4 style="border-bottom: 5px solid #052652;"><b>Accreditations</b></h4>
+                            </div>
+                        </div>
+                    
+                    
+                    <!-- Image Boxes (3 in a row) -->
+                    <div class="col-md-4">
+                        <div style="display: inline-block; width: 370px; height: 370px; margin-right: 10px;margin-top: 10px;">
+                            <a href="iv.html">
+                                <img src="iv.png" alt="Person" style="width: 100%; height: 100%;" class="w3-border">
+                            </a>
+                            <div class="w3-container" class="w3-border">
+                                <h4 style="border-bottom: 5px solid #052652;"><b>Industrial Visits</b></h4>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div style="display: inline-block; width: 340px; height: 370px; margin-right: 10px;margin-top: 10px;">
+                            <a href="sym.html">
+                                <img src="symposium.png" alt="Person" style="width:100%; height: 100%;" class="w3-border">
+                            </a>
+                            <div class="w3-container" class="w3-border">
+                                <h4 style="border-bottom: 5px solid #052652;"><b>Symposium</b></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="col-md-4">
+                        <div style="display: inline-block; width: 340px; height: 370px; margin-right: 10px;margin-top: 10px;">
+                            <a href="club.html">
+                                <img src="club.jpg" alt="Person" style="width:100%; height: 100%;" class="w3-border">
+                            </a>
+                            <div class="w3-container" class="w3-border">
+                                <h4 style="border-bottom: 5px solid #052652;"><b>CLUBS</b></h4>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Add more image boxes here -->
+                    
+                    <div class="col-md-4">
+                        <div style="display: inline-block; width: 370px; height: 370px; margin-right: 10px; margin-top: 10px;">
+                            <a href="news.html">
+                                <img src="new.jpg" alt="Person" style="width:100%; height: 100%;" class="w3-border">
+                            </a>
+                            <div class="w3-container" class="w3-border">
+                                <h4 style="border-bottom: 5px solid #052652;"><b>Newsletter</b></h4>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div style="display: inline-block; width: 370px; height: 370px; margin-right: 10px;margin-top: 10px;">
+                            <a href="iv.html">
+                                <img src="camp.png" alt="Person" style="width: 100%; height: 100%;" class="w3-border">
+                            </a>
+                            <div class="w3-container" class="w3-border">
+                                <h4 style="border-bottom: 5px solid #052652;"><b>Campus Life</b></h4>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Counselling Section -->
+                    <div class="col-md-4">
+                        <div style="display: inline-block; width: 340px; height: 370px; margin-right: 10px;margin-top: 10px;">
+                            <a href="counselling.html">
+                                <img src="coun.jpg" alt="Person" style="width:100%; height: 100%;" class="w3-border">
+                            </a>
+                            <div class="w3-container" class="w3-border">
+                                <h4 style="border-bottom: 5px solid #052652;"><b>Counselling</b></h4>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Accolades Section -->
+                    <div class="col-md-4">
+                        <div style="display: inline-block; width: 370px; height: 370px; margin-right: 10px;margin-top: 10px;">
+                            <a href="accolades.html">
+                                <img src="aco.jpg" alt="Person" style="width:85%; height: 100%;" class="w3-border">
+                            </a>
+                            <div class="w3-container" class="w3-border">
+                                <h4 style="border-bottom: 5px solid #052652;"><b>Accolades</b></h4>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Gallery Section -->
+                    <div class="col-md-4">
+                        <div style="display: inline-block; width: 370px; height: 370px; margin-right: 10px;margin-top: 10px;">
+                            <a href="gallery.html">
+                                <img src="gal.jpg" alt="Person" style="width:100%; height: 100%;" class="w3-border">
+                            </a>
+                            <div class="w3-container" class="w3-border">
+                                <h4 style="border-bottom: 5px solid #052652;"><b>Gallery</b></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+                    
+            <br>
+        <div class="container">
+            <div class="row">            
+                <div class="col-sm-8" style="text-align: center"><font face="Times New Roman">
+                    <p class="text-justify">
+						    <b> Prof. K.R. Sundararajan</b>, one of the eminent educationists of South India, established Indian Institute of Engineering Technology (IIET) in the year 1947 when there were only a few Engineering Colleges in the state and young aspirants could not find opportunities to become engineers. Prof. KRS guides them to fulfill their dreams to become full-fledged engineers through the AMIE programme. Since then, the alumni of IIET have been occupying high ranking positions in state, central government and corporate sectors and many of them have turned out to become entrepreneurs running profitable small scale Industries and businesses.
+
+</p>
+                    <p class="text-justify">
+            Prof. KRS established Meenakshi College for Women in the same campus in 1975.  This college is best and the most prestigious women's colleges in Tamilnadu with a strength of 3000 students. It is an aided institution affiliated to the University of Madras and has been a pioneer in the field of higher education for women for the past three decades. 
+
+</p>
+                    <p class="text-justify">
+            In his last years, Prof. KRS had a dream of starting a full-blown Engineering College to give quality education in various branches of engineering. His dream become when Meenakshi Sundararajan Engineering College started functioning in July 2001.
+					<p></font>
+                        
+               
+					<div><h2 align=left><font face="times new roman">From Secretary's Desk</font> </h2></div>
+                    <img src="pro.jpg" style="width:100px; height:150px;" alt="Secretary" align=left>
+					 <font face="Times New Roman"> <p class="text-justify">
+						  <b> Meenakshi Sundararajan Engineering College (MSEC)</b> was established by the IIET Society in 2001. This institution is a part of the prestigious KRS Group of Institutions which also includes the renowned IIET (Indian Institute of Engineering Technology) established in 1947 by our Founder Late Shri K.R.Sundararajan, the well-known Meenakshi College for Women and the more recently established Meenakshi Sundararajan School of Management. The institutions on the KRS Campus are known for the quality education they impart and their stringent levels of discipline. We have consistently outshone all our peers, not only in academics, but in co-curricular activities as well.
+                    </p>
+                    <p class="text-justify">
+                        Since inception MSEC has shown consistent performance in academics and extra-curricular spheres. The management strives constantly to develop this institution into a <b> "CENTRE OF EXCELLENCE" </b> imparting Engineering education to young men and women, grooming their overall personality with the highest emphasis on ethical values and honing them to face the challenges of the industry and the nation at large.
+						 </p></font>	
+					
+					<br>
+					<br>
+			
+			</div>
+                <div class="col-sm-4">
+                    <div class="panel panel-default" style="min-height:10px; margin-top: 10px;"><br>
+						<div class="panel-heading"><center><font face="Times New Roman" size=4><strong>Announcements</strong> </font></center>
+							<a href="#" style="text-decoration: underline; font-size: 10px"></a> </div>
+                        <div class="panel-body">
+							<div style="height: 500px">
+								<marquee style=" height:100%;" direction="up" scrolldelay="60" behavior="scroll" onmouseover="this.stop()" onmouseout="this.start()"><font face="Times New Roman">
+									<font face=Times New Roman color="indigo" size=2>
+										<a href="MSEC_WebsiteDesignCompetition.pdf" target="blank"><strong> <i>News 1</i></strong></img></a><img class="blink_me" src="new.gif" width=30 height=15></img> <br/><br/>	
+									
+										<a href="Ventilator.html"> <strong> <i>News 2	</i></strong><img class="blink_me" src="new.gif" width=30 height=15></img> </a><br/><br/>
+									<a href="Corneese.html"> <strong> <i>News 3</i></strong><img class="blink_me" src="new.gif" width=30 height=15></img> </a><br/><br/>
+								</font>
+                            	</marquee>
+							</div>
+ 
+                        </div>
+<br>
+</center>
+
+
+                </div>
+
+            </div>
+
+            
+        </div>
+        <div class="logo" onclick="toggleChatbot()">
+            <img src="logo.png" alt="Logo" width="100" height="100" id="logo-img">
+        </div>
+    
+        <!-- Chatbot container -->
+        <div class="chatbot-container" id="chatbot">
+            <div class="chatbot-header">
+                <h3 style="color:whitesmoke;">MSEC ASSISTANT</h3>
+                <div class="close-button" onclick="toggleChatbot()">&#10006;</div>
+            </div>
+            <div class="chatbot-options">
+                <!-- Call Us option -->
+                <a href="tel:123456789" class="chatbot-option-button">Call Us</a>
+                <!-- Message Us option -->
+                <a href="sms:123456789" class="chatbot-option-button">Text Us</a>
+                <!-- Enquiry Form option -->
+                <a href="https://docs.google.com/forms/d/e/your_google_form_link_here" target="_blank" class="chatbot-option-button">Enquiry Form</a>
+            </div>
+        </div>
+    
+        <script>
+            // JavaScript function to toggle the chatbot visibility and logo icon
+            function toggleChatbot() {
+                var chatbot = document.getElementById('chatbot');
+                chatbot.classList.toggle('show-chatbot');
+                var logoImg = document.getElementById('logo-img');
+                logoImg.src = chatbot.classList.contains('show-chatbot') ? 'close-icon.png' : 'logo.png';
+            }
+        </script>
+
+        <br/>
+        <footer class="w3-center" style="text-align: center; background-color: #00254e; padding: 2px; color: whitesmoke">
+            <p>363, Arcot Road, Kodambakkam, Chennai - 24</p>
+            <div class="social-icons">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+        </footer>
+    </body>
+</html>
+<!--<a href="https://www.ncdmems2019.com/"><font color="purple"> National Conference on Develepments in Mechanical Engineering to Maintain Sustainability NCDMEMS - 2019 organised by Department of Mechanical Engineering on 8th March 2019</font><img src="newb.gif" width=30 height=15></img> </a> <br/><br/>
+							<a href="http://www.nciict.in"><font color="purple"> National Conference on Innovations in Information and Communication Technology organised by Department of IT on 2nd March 2019</font><img src="newb.gif" width=30 height=15></img> </a> <br/><br/>
+								<a href="nctct2019/index.html"><font color="purple"> National Conference on Trends in Computing Technologies organised by Department of CSE on 2nd March 2019</font><img src="newb.gif" width=30 height=15></img> </a> <br/><br/>
+							<a href="nceepe2019/index.html"><font color="purple"> National Conference on Emerging Trends in Electrical and Power Engineering (NCEEPE '19) organised by Department of EEE on 2nd March 2019</font><img src="newb.gif" width=30 height=15></img> </a> <br/><br/>
+						<a href="https://www.ncaet-2019.com"><font color="purple"> National Conference on Advancements in Emerging Technologies organised by Department of ECE on 2nd March 2019</font><img src="newb.gif" width=30 height=15></img> </a> <br/><br/>-->

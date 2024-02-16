@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://unpkg.com/scrollreveal@4.0.7/dist/scrollreveal.min.js"></script>
+<script src="timeline.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<link href="timeline.css" rel="stylesheet">
+<link href="ob.css" rel="stylesheet">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+  <div>
+    <h1 style="text-align: center;"><strong>AI CLUB</strong></h1>
+    <div class="flex-container">
+      <div>
+        <img id="logo" src="ailogo.jpeg" alt="Logo">
+      </div>
+      <div>
+        <h1 style="text-align: center; font-size: 50px;">OBJECTIVE</h1>
+        <h3>PURSUIT OF EXCELLENCE</h3>
+        <p style="text-align: justify;">The scope of the AI club is to equip students to experience the limitless possibilities available in the field of Artificial Intelligence and to let them find, learn, build, and branch the concepts that motivate active participation in projects and land a career with the latest evolving tech.</p>    
+      </div>
+    </div>
+    <h1 style="text-align: center; font-size: large; font-family: 'Times New Roman', Times, serif; margin-right: 200px;"></h1>
+  </div>
+  
+  <div>
+    <h1 style="margin-top: -100px;text-align: center;">Office Bearers</h1>
+    <div class="team-container"style="margin-top: 100px;margin: bottom 50px;">
+      <div class="team-member" id="member1">
+        <img src="p4.jpg" alt="Team Member 1">
+        <h3>Sulaksha</h3>
+        <p>Founder</p>
+      </div>
+      <div class="team-member" id="member2">
+        <img src="p4.jpg" alt="Team Member 2">
+        <h3>Shruthi Priyaa</h3>
+        <p>Marketing Head</p>
+      </div>
+      <div class="team-member" id="member3">
+        <img src="p4.jpg" alt="Team Member 3">
+        <h3>Amritha</h3>
+        <p>UX/UI Designer</p>
+      </div>
+      <div class="team-member" id="member4">
+        <img src="p4.jpg" alt="Team Member 4">
+        <h3>Sai Sakti</h3>
+        <p>UX/UI Designer</p>
+      </div>
+    </div>
+  </div>
+  <br>
+  <!-- Include the external JavaScript file -->
+  <script src="calendar.js"></script>
+  <script>
+    // Sample event data
+    const events = [
+      { date: '2024-02-05', title: 'Paper Presentation' },
+      { date: '2024-02-15', title: 'Robotics' },
+      { date: '2024-02-20', title: 'Demo Day' }
+    ];
+
+    // Call toggleCalendar with true to initially display the calendar
+    toggleCalendar(true, events);
+  </script>
+  <div class="row">
+    <button class="toggle-button" onclick="toggleCalendar(true, events)">
+        <img src="calendar.jpg" alt="Show Calendar" class="calendar-icon">
+      </button>
+      
+    <div id="calendar" class="calendar" style="display: none;">
+      <!-- Calendar content will be dynamically generated here -->
+    </div>
+  <div class="timeline">
+    <div class="container left">
+      <div class="content">
+        <h2>February 05, 2024</h2>
+        <div class="event-image">
+          <!-- Image for the event -->
+        </div>
+        <span>Paper Presentation</span>
+      </div>
+    </div>
+    <div class="container right">
+      <div class="content">
+        <h2>February 15, 2024</h2>
+        <div class="event-image">
+          <!-- Image for the event -->
+        </div>
+        <span>Robotics</span>
+      </div>
+    </div>
+    <div class="container left">
+      <div class="content">
+        <h2>February 20, 2024</h2>
+        <div class="event-image">
+          <!-- Image for the event -->
+        </div>
+        <span>Demo Day</span>
+      </div>
+    </div>
+    <div class="container right">
+      <div class="content">
+        <h2>February 24, 2024</h2>
+        <div class="event-image">
+          <!-- Image for the event -->
+        </div>
+        <span>Hackathon</span>
+      </div>
+    </div>
+    <div class="container left">
+      <div class="content">
+        <h2>February 27, 2024</h2>
+        <div class="event-image">
+          <!-- Image for the event -->
+        </div>
+        <span>ChatBot Development</span>
+      </div>
+    </div>
+  </div>
+<a href="pro.html" style="color: azure;">GO BACK</a>
+<footer class="w3-center" style="text-align: center; background-color: #00254e; padding: 2px; color: whitesmoke">
+  <p>363, Arcot Road, Kodambakkam, Chennai - 24</p>
+  <div class="social-icons">
+    <a href="https://www.instagram.com/ai_club_msec?igsh=MXc0YzB3OWwwNW16aA==" style="color:white"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.instagram.com/ai_club_msec?igsh=MXc0YzB3OWwwNW16aA==" style="color:white"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.instagram.com/ai_club_msec?igsh=MXc0YzB3OWwwNW16aA==" style="color:white"><i class="fab fa-linkedin"></i></a>
+    <a href="https://www.instagram.com/ai_club_msec?igsh=MXc0YzB3OWwwNW16aA==" style="color:white"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.instagram.com/ai_club_msec?igsh=MXc0YzB3OWwwNW16aA==" style="color:white"><i class="fab fa-youtube"></i></a>
+  </div>  
+</footer>
+</body>
+</html>

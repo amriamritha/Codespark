@@ -1,0 +1,343 @@
+
+<!DOCTYPE html>
+<html>
+     
+    <head>
+        <title>Meenakshi Sundararajan Engineering College</title>
+        <meta charset="utf-12">
+        <meta name="viewport" content="width=device-width, initial-scale=8.0">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+        <style>
+            #blinker
+            {text-decoration:blink;}
+            #myInput        
+            {
+                width:0%;
+                -webkit-transition:width 0.1s ease-in-out;
+            }
+            #myInput:hover,#myInput:focus   
+            {
+                width:100%;
+                -webkit-transition:width 0.3s ease-in-out;
+            }
+
+        </style>
+
+        <style>
+            /* navbar */
+            .navbar-default {
+                background-color: #052652!important;
+                border-color: #E7E7E7;
+                margin-bottom: 10px;
+            }
+            /* Title */
+            .navbar-default .navbar-brand {
+                color: #52524e;
+            }
+            .navbar-default .navbar-brand:hover,
+            .navbar-default .navbar-brand:focus {
+                color: #3a3937;
+            }
+            /* Link */
+            .navbar-default .navbar-nav > li > a {
+                color: #ffffff;
+            }
+            .navbar-default .navbar-nav > li > a:hover,
+            .navbar-default .navbar-nav > li > a:focus {
+                color: #ffffff;
+                background-color: #3a3937;
+            }
+            .navbar-default .navbar-nav > .active > a,
+            .navbar-default .navbar-nav > .active > a:hover,
+            .navbar-default .navbar-nav > .active > a:focus {
+                color: #ffffff;
+                background-color: #3a3937;
+            }
+            .navbar-default .navbar-nav > .open > a,
+            .navbar-default .navbar-nav > .open > a:hover,
+            .navbar-default .navbar-nav > .open > a:focus {
+                color: #ffffff;
+                background-color: #3a3937;
+            }
+            /* Caret */
+            .navbar-default .navbar-nav > .dropdown > a .caret {
+                border-top-color: #3a3937;
+                border-bottom-color: #3a3937;
+            }
+            .navbar-default .navbar-nav > .dropdown > a:hover .caret,
+            .navbar-default .navbar-nav > .dropdown > a:focus .caret {
+                border-top-color: #ffffff;
+                border-bottom-color: #ffffff;
+            }
+            .navbar-default .navbar-nav > .open > a .caret,
+            .navbar-default .navbar-nav > .open > a:hover .caret,
+            .navbar-default .navbar-nav > .open > a:focus .caret {
+                border-top-color: #000000;
+                border-bottom-color: #000000;
+            }
+
+            .navbar-default .navbar-nav > .open .dropdown-menu > li >a:hover {
+                background-color: #3a3937;
+            }
+            .dropdown-menu > li > a:hover, 
+            .dropdown-menu > li > a:focus {
+                background-color: #3a3937;
+            }
+
+            /* Mobile version */
+            .navbar-default .navbar-toggle {
+                border-color: #DDD;
+            }
+            .navbar-default .navbar-toggle:hover,
+            .navbar-default .navbar-toggle:focus {
+                background-color: #DDD;
+            }
+            .navbar-default .navbar-toggle .icon-bar {
+                background-color: #CCC;
+            }
+            @media (max-width: 767px) {
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+                    color: #ffffff;
+                }
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+                    color: #000000;
+                }
+            }
+
+            @media (min-width: 1024px){
+                .navbar-nav{
+                    margin: 0 auto;
+                    display: table;
+                    table-layout: fixed;
+                    float:none;
+                }
+            }
+
+        </style>
+        <style>
+            a.link_color:hover 
+            {
+                color:#ffffff;
+            }
+            @media (min-width: 1024px){
+                li.dropdown:hover > .dropdown-menu {
+                    display: block;
+                }
+            }
+       
+        </style>
+        <style>
+.button {
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 2px 2px;
+  cursor: pointer;
+}
+
+.button1 {background-color:  #00254E;} /* Blue */
+</style>
+
+        <style>
+        @-webkit-keyframes zoom {
+            from {
+                -webkit-transform: scale(1, 1);
+            }
+            to {
+                -webkit-transform: scale(1.5, 1.5);
+            }
+        }
+
+        @keyframes zoom {
+            from {
+                transform: scale(1, 1);
+            }
+            to {
+                transform: scale(1.5, 1.5);
+            }
+        }
+
+        .carousel-inner .item > img {
+            -webkit-animation: zoom 10s;
+            animation: zoom 10s;
+        }
+            .center img.img-with-animation {
+    margin: -28px auto;
+    display: block;
+}
+    </style>
+<style>
+    .pos1 {
+  position: absolute;
+  top: 310px;
+  left: 320px;
+}
+    .pos2 {
+  position: absolute;
+  top: 110px;
+  left: 20px;
+}
+    .centered {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+    
+form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+        </style>
+    </head>
+    <body>
+   
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navBar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navBar"><font face="Arial">
+
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">HOME</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"> ABOUT <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="about.html"> Vision and Mission </a></li>
+                                <li><a href="management.html"> Management </a></li>
+                                <li><a href="administration.html"> Administration & Faculty</a></li>
+                                <li><a href="Committees.html"> Statutory Cells/ Committees </a></li>
+
+                                <li> <a href="Admission.pdf"> Admissions</a></li>
+                                <li> <a href="Fees.html"> Fees </a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"> DEPARTMENTS <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="civil.html"> Civil Engineering </a></li>
+                                <li><a href="Computer.html"> Computer Science and Engineering </a></li>
+                                <li><a href="ece.html"> Electronics and Communication Engineering </a></li>
+                                <li><a href="eee.html"> Electrical and Electronics Engineering </a></li>
+                                <li><a href="it.html"> Information Technology </a></li>
+                                <li><a href="mechanical.html"> Mechanical Engineering </a></li>
+                                <li><a href="AI_DS.html"> Artificial Intelliigence and Data Science </a></li>
+                                <li><a href="HS.html"> Humanities and Science </a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="whymsec"> WHY MSEC <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="whymsec.html"> Campus Life </a></li>
+                                <li><a href="counselling.html"> Counselling  </a></li>
+                                <li><a href="accolades.html"> Accolades  </a></li>
+                                <li><a href="gallery.html"> Gallery </a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"> INFRASTRUCTURES <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                 <li><a href="lab.html"> Laboratories </a></li>
+                                <li><a href="auditorium.html"> Auditoriums </a></li>
+                                <li><a href="Library.html"> Library </a></li>
+                            </ul>
+                        </li>
+                        <li><a href="research.html"> RESEARCH </a></li>
+                        <li><a href="placement.html"> PLACEMENTS </a></li>
+                        <li><a href="nirf.html"> NIRF </a></li> 
+                         <li><a href="MandatoryDisclosureMSEC.pdf"> Mandatory Disclosure </a></li>  
+
+                        
+                        <li><a href="contact.html">CONTACT US </a></li>                                 
+                    </ul>    
+                    <form method="post" action="connector.php">
+                        <p style="font-family: 'Times New Roman', Times, serif;"><strong>OFFICE BEARERS</strong></p>
+                        <label for="reg_no">Reg_No:</label>
+                        <input type="text" id="reg_no" name="Reg_No" required>
+                    
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="Name" required>
+                    
+                        <label for="dept">Department:</label>
+                        <input type="text" id="dept" name="Department" required>
+                    
+                        <label for="desgn">Designation:</label>
+                        <input type="text" id="desgn" name="Designation" required>
+
+                        <label for="image">Image:</label>
+                        <input type="file" id="image" name="image" accept="image/*" required>
+
+                        <button type="submit">Submit</button>
+                    </form>   
+                    </font>
+                </div>
+            </div>
+        </nav>
+     <br/>
+        <footer class="w3-center" style="background-color: #00254e; padding: 2px; color: #ffffff">
+
+            <p> 363, Arcot Road, Kodambakkam, Chennai - 24 </p>
+        </footer>
+        <footer class="w3-center" style="padding: 2px; background-color: #000000;">
+            <div class="container">
+                <p class="copyright text-muted small" style="color: #ffffff" >All Rights Reserved</p>
+            </div>
+        </footer>
+    </body>
+</html>
+<!--<a href="https://www.ncdmems2019.com/"><font color="purple"> National Conference on Develepments in Mechanical Engineering to Maintain Sustainability NCDMEMS - 2019 organised by Department of Mechanical Engineering on 8th March 2019</font><img src="newb.gif" width=30 height=15></img> </a> <br/><br/>
+                            <a href="http://www.nciict.in"><font color="purple"> National Conference on Innovations in Information and Communication Technology organised by Department of IT on 2nd March 2019</font><img src="newb.gif" width=30 height=15></img> </a> <br/><br/>
+                                <a href="nctct2019/index.html"><font color="purple"> National Conference on Trends in Computing Technologies organised by Department of CSE on 2nd March 2019</font><img src="newb.gif" width=30 height=15></img> </a> <br/><br/>
+                            <a href="nceepe2019/index.html"><font color="purple"> National Conference on Emerging Trends in Electrical and Power Engineering (NCEEPE '19) organised by Department of EEE on 2nd March 2019</font><img src="newb.gif" width=30 height=15></img> </a> <br/><br/>
+                        <a href="https://www.ncaet-2019.com"><font color="purple"> National Conference on Advancements in Emerging Technologies organised by Department of ECE on 2nd March 2019</font><img src="newb.gif" width=30 height=15></img> </a> <br/><br/>-->
+
